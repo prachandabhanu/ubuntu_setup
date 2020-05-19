@@ -49,14 +49,15 @@ sudo apt upgrade -y
 
 echo "[Install the ros-desktop-full]"
 sudo apt install -y ros-$name_ros_version-desktop-full
-
-echo "[Initialize rosdep]"
-sudo sh -c "rosdep init"
-rosdep update
+sudo apt install - python-rosdep
 
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh
 sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool
+
+echo "[Initialize rosdep]"
+sudo sh -c "rosdep init"
+rosdep update
 
 echo "[Install Catkin tool]"
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
