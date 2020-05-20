@@ -29,7 +29,7 @@ if [ -d "build" ]; then
 fi
 mkdir build && cd build
 cmake  -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-make -j8
+make -j$(nproc)
 sudo make install
 
 echo "[---------------------> flann <----------------------------]"
@@ -39,13 +39,13 @@ if [ -d "build" ]; then
 fi
 mkdir build && cd build
 cmake  -DBUILD_MATLAB_BINDING=OFF -DBUILD_PYTHON_BINDING=OFF ..
-make -j8
+make -j$(nproc)
 sudo make install
 
 echo "[---------------------> qhull <----------------------------]"
 cd ~/ros_ws/pcl_raw_install/qhull/build
 cmake  -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-make -j8
+make -j$(nproc)
 sudo make install
 
 echo "[---------------------> googletest <----------------------------]"
@@ -55,7 +55,7 @@ if [ -d "build" ]; then
 fi
 mkdir build && cd build
 cmake  -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-make -j8
+make -j$(nproc)
 sudo make install
 
 echo "[---------------------> pcl-1.11.1 <----------------------------]"
@@ -66,5 +66,5 @@ fi
 mkdir build && cd build
 cmake  -DBUILD_CUDA=ON -DBUILD_GPU=ON -DBUILD_cuda_io=ON -DBUILD_gpu_surface=ON -DBUILD_gpu_tracking=ON ..
 cmake  -DBUILD_CUDA=ON -DBUILD_GPU=ON -DBUILD_cuda_io=ON -DBUILD_gpu_surface=ON -DBUILD_gpu_tracking=ON ..
-make -j8
+make -j$(nproc)
 sudo make install
