@@ -42,11 +42,11 @@ cmake  -DBUILD_MATLAB_BINDING=OFF -DBUILD_PYTHON_BINDING=OFF ..
 make -j$(nproc)
 sudo make install
 
-echo "[---------------------> qhull <----------------------------]"
-cd ~/ros_ws/pcl_raw_install/qhull/build
-cmake  -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-make -j$(nproc)
-sudo make install
+# echo "[---------------------> qhull <----------------------------]"
+# cd ~/ros_ws/pcl_raw_install/qhull/build
+# cmake  -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+# make -j$(nproc)
+# sudo make install
 
 echo "[---------------------> googletest <----------------------------]"
 cd ~/ros_ws/pcl_raw_install/googletest
