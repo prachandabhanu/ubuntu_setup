@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/vishnu/ros_ws/catkin_nimbus_work/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/vishnu/ros_ws/catkin_nimbus_work/src/Azure_Kinect_ROS_Driver/include/**",
+                "/home/vishnu/ros_ws/catkin_nimbus_work/src/nimbus_cloud/include/**",
+                "/home/vishnu/ros_ws/catkin_nimbus_work/src/nimbus_fh_detector/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}
