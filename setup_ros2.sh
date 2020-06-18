@@ -4,10 +4,6 @@ echo "[Update the package lists and upgrade them]"
 sudo apt update
 sudo apt upgrade -y
 
-echo "[Set the target OS, ROS version ]"
-name_os_version=${name_os_version:="bionic"}
-name_ros2_version=${name_ros2_version:="eloquent"}
-
 echo "[-------------------------------------------------------> ROS2 <--------------------------------------------------------]"
 echo "[Setup Locale]"
 sudo locale-gen en_US en_US.UTF-8
@@ -24,8 +20,8 @@ fi
 
 echo "[Install ROS 2 packages]"
 sudo apt update
-sudo apt install -y ros-$name_ros2_version-desktop
-source /opt/ros/$name_ros2_version/setup.bash
+sudo apt install -y ros-foxy-desktop
+source /opt/ros/foxy/setup.bash
 sudo apt update
-sudo apt install -y ros-$name_ros2_version-rmw-opensplice-cpp
-sudo apt install -y ros-$name_ros2_version-rmw-connext-cpp
+sudo apt install -y ros-foxy-rmw-opensplice-cpp
+sudo apt install -y ros-foxy-rmw-connext-cpp
