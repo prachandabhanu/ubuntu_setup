@@ -62,3 +62,9 @@ mkdir build && cd build
 cmake ..
 make -j$(nproc)
 sudo make install
+
+echo "[----------> PLC snap7 <------------------]"
+sudo add-apt-repository ppa:gijzelaar/snap7
+sudo apt update
+sudo apt -y install libsnap7-1 libsnap7-dev python-pip
+pip install python-snap7 -U
