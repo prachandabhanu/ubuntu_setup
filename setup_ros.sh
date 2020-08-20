@@ -35,9 +35,12 @@ sudo apt install -y ros-noetic-desktop-full
 
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/noetic/setup.sh
+sudo apt-get install python3-rosdep python3-rosinstall-generator python3-vcstool build-essential
 
 echo "[Install Catkin tool]"
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
-wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
-sudo apt update
-sudo apt install -y python-catkin-tools
+# sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
+# wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+# sudo apt update
+# sudo apt install -y python-catkin-tools
+sudo apt install python3-catkin-lint python3-pip
+pip3 install osrf-pycommon
