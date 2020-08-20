@@ -57,5 +57,4 @@ sudo apt install --no-install-recommends -y \
 sudo apt install -y ros-foxy-desktop
 source /opt/ros/foxy/setup.bash
 sudo apt update
-sudo apt install -y ros-foxy-rmw-opensplice-cpp
 sudo apt install -y ros-foxy-rmw-connext-cpp
