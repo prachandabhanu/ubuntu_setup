@@ -42,5 +42,6 @@ echo "[Install Catkin tool]"
 # wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 # sudo apt update
 # sudo apt install -y python-catkin-tools
-sudo apt install python3-catkin-lint python3-pip
+sudo apt install -y python3-catkin-lint python3-pip
 pip3 install osrf-pycommon
+sudo apt install -y python3-catkin-tools
