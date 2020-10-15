@@ -45,3 +45,6 @@ echo "[Install Catkin tool]"
 sudo apt install -y python3-catkin-lint python3-pip
 pip3 install osrf-pycommon
 sudo apt install -y python3-catkin-tools
+
+sudo rosdep init
+rosdep update
